@@ -34,7 +34,7 @@ const verifyToken = (req, res, next) => {
       });
     }
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);;
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.admin = decoded;
 
     next();
@@ -152,6 +152,8 @@ app.delete("/admin/contact/:id", verifyToken, async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT, () => {
-  console.log("Server is running on port", process.env.PORT);
-})
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log("Server is running on port", PORT);
+});

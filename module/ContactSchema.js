@@ -31,11 +31,6 @@ const ContactSchema = new mongoose.Schema(
     required: true
   },
 
-  centerCity: {
-    type: String,
-    required: true
-  },
-
   message: {
     type: String,
     default: ""

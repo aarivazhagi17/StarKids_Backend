@@ -90,7 +90,6 @@ app.post("/contact", async (req, res) => {
       email,
       phoneNumber,
       program,
-      centerCity,
       message,
     } = req.body;
 
